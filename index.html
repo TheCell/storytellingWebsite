@@ -36,6 +36,38 @@
 				window.isFading = false;
 			});
 		}
+
+		function returnAudioSources(arr)
+		{
+			let onlyAudios = [];
+
+			arr.forEach( function (ele, index)
+			{
+				if (ele.src)
+				{
+					onlyAudios = onlyAudios.concat(ele);
+				}
+			});
+
+			return onlyAudios;
+		}
+
+		function setAudioSource (audioElement, sourceNumber)
+		{
+			let audioFiles = returnAudioSources(audioElement.childNodes)
+
+			if (audioFiles.length >= sourceNumber)
+			{
+				audioElement.src = audioFiles[sourceNumber -1].src;
+			}
+			else if (audioFiles.length > 0)
+			{
+				audioElement.src = audioFiles[audioFiles.length].src;
+			}
+
+			audioElement.load();
+			audioElement.play();
+		}
 	</script>
 </head>
 <body>
@@ -109,6 +141,7 @@
 		}
 		console.log(this.volume);
 	};
+
 </script>
 </body>
 </html>

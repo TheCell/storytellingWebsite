@@ -2,12 +2,46 @@
 <html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+=======
+	<meta charset="utf-8">
+>>>>>>> b7619c65dda81e1a33de0e2a93cad5ffb3d95cb8
 	<title>Storytelling Projekt</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
-		// setup default variables
+		// setup default variables & functions
+		window.isMouseDown = false;
+		window.userAudioSetting;
 
+		// event functions
+		function onMouseClick(evt)
+		{
+			//console.log("mouseClick", evt);
+		}
+
+		function onMove(evt)
+		{
+			//console.log("move", evt);
+		}
+
+		function onDoubleClick(evt)
+		{
+			//console.log("onDoubleClick", evt);
+		}
+
+		function onMouseDown(evt)
+		{
+			//console.log("onMouseDown", evt);
+			window.isMouseDown = true;
+		}
+
+		function onMouseUp(evt)
+		{
+			//console.log("onMouseUp", evt);
+			window.isMouseDown = false;
+		}
+
+		// audio stuff
 		function fadeOutAudio (audioElement, fadeOutTimeMS = 1000)
 		{
 			window.isFading = true;
@@ -15,11 +49,15 @@
 			$(audioElement).animate(
 			{
 				volume: 0.0
-			}, fadeOutTimeMS, function ()
+			},
 			{
-				// this shit gets called before the last onvolumechange
-				console.log("finished fading");
-				window.isFading = false;
+				duration: fadeOutTimeMS,
+				complete: function ()
+				{
+					// this shit gets called before the last onvolumechange
+					//console.log("finished fading");
+					window.isFading = false;
+				}
 			});
 		}
 
@@ -29,12 +67,16 @@
 
 			$(audioElement).animate(
 			{
-				volume: localStorage.getItem("defaultUserAudioSetting") ? localStorage.getItem("defaultUserAudioSetting") : 1
-			}, fadeInTimeMS, function ()
+				volume: localStorage.getItem("defaultUserAudioSetting") ? localStorage.getItem("defaultUserAudioSetting") : 0.7
+			},
 			{
-				// this shit gets called before the last onvolumechange
-				console.log("finished fading");
-				window.isFading = false;
+				duration: fadeInTimeMS,
+				complete: function ()
+				{
+					// this shit gets called before the last onvolumechange
+					//console.log("finished fading");
+					window.isFading = false;
+				}
 			});
 		}
 
@@ -63,7 +105,7 @@
 			}
 			else if (audioFiles.length > 0)
 			{
-				audioElement.src = audioFiles[audioFiles.length].src;
+				audioElement.src = audioFiles[audioFiles.length -1].src;
 			}
 
 			audioElement.load();
@@ -135,6 +177,8 @@
 
 <script type="text/javascript">
 	let userAudioSetting = document.getElementById("audioPlayer");
+	// for debug
+	window.userAudioSetting = userAudioSetting;
 
 	if (localStorage.getItem("defaultUserAudioSetting"))
 	{
@@ -148,13 +192,45 @@
 	userAudioSetting.onvolumechange = function ()
 	{
 		localStorage.setItem("userAudioSetting", this.volume);
-		if (!window.isFading)
+
+		if (!window.isFading && window.isMouseDown)
 		{
 			localStorage.setItem("defaultUserAudioSetting", this.volume);
 		}
-		console.log(this.volume);
+
+		// console.log("onvolumechange:", this.volume);
 	};
 
+	// add all the eventlisteners
+	document.body.onclick = function (evt)
+	{
+		onMouseClick(evt);
+	};
+
+	document.body.onmove = function (evt)
+	{
+		onMove(evt);
+	};
+
+	document.body.ondblclick = function (evt)
+	{
+		onDoubleClick(evt);
+	};
+
+	document.body.ondblclick = function (evt)
+	{
+		onDoubleClick(evt);
+	};
+
+	document.body.onmousedown = function (evt)
+	{
+		onMouseDown(evt);
+	};
+
+	document.body.onmouseup = function (evt)
+	{
+		onMouseUp(evt);
+	};
 </script>
 </body>
 </html>

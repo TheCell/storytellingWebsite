@@ -6,10 +6,33 @@ body, html
 	color: #777;
 }
 
+.testText
+{
+	font-family: 'Barlow Condensed', sans-serif;
+	margin-top: 33vh;
+	width: 45vw;
+	float: right;
+}
+
+.testText h1
+{
+	color: white;
+	margin-bottom: 100vh;
+	font-size: 2.6em;
+}
+
+.testText p 
+{
+	color: white;
+	font-size: 2em;
+	margin-bottom: 100vh;
+	width: 80%;
+}
+
 .bgimg-1, .bgimg-2, .bgimg-3
 {
 	position: relative;
-	opacity: 0.65;
+	opacity: 0.9;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,14 +41,15 @@ body, html
 }
 .bgimg-1
 {
-	background-image: url("images/img_parallax.jpg");
-	min-height: 100%;
+	background-image: url("images/coffee.gif");
+	min-height: 300vh;
+	height: auto;
 }
 
 .bgimg-2
 {
-	background-image: url("images/img_parallax2.jpg");
-	min-height: 100%;
+	background-image: url("images/train.gif");
+	min-height: 300vh;
 	/* min-height: 400px; */
 }
 

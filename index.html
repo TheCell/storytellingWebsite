@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Storytelling Projekt</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
-		// setup default variables
+		// setup default variables & functions
+		window.isMouseDown = false;
 
+		// event functions
+		function onMouseClick(evt)
+		{
+			console.log("mouseClick", evt);
+		}
+
+		function onMove(evt)
+		{
+			console.log("move", evt);
+		}
+
+		function onDoubleClick(evt)
+		{
+			console.log("onDoubleClick", evt);
+		}
+
+		function onMouseDown(evt)
+		{
+			console.log("onMouseDown", evt);
+			window.isMouseDown = true;
+		}
+
+		function onMouseUp(evt)
+		{
+			console.log("onMouseUp", evt);
+			window.isMouseDown = false;
+		}
+
+		// audio stuff
 		function fadeOutAudio (audioElement, fadeOutTimeMS = 1000)
 		{
 			window.isFading = true;
@@ -14,11 +45,15 @@
 			$(audioElement).animate(
 			{
 				volume: 0.0
-			}, fadeOutTimeMS, function ()
+			},
 			{
-				// this shit gets called before the last onvolumechange
-				console.log("finished fading");
-				window.isFading = false;
+				duration: fadeOutTimeMS,
+				complete: function ()
+				{
+					// this shit gets called before the last onvolumechange
+					console.log("finished fading");
+					window.isFading = false;
+				}
 			});
 		}
 
@@ -28,12 +63,16 @@
 
 			$(audioElement).animate(
 			{
-				volume: localStorage.getItem("defaultUserAudioSetting") ? localStorage.getItem("defaultUserAudioSetting") : 1
-			}, fadeInTimeMS, function ()
+				volume: localStorage.getItem("defaultUserAudioSetting") ? localStorage.getItem("defaultUserAudioSetting") : 0.7
+			},
 			{
-				// this shit gets called before the last onvolumechange
-				console.log("finished fading");
-				window.isFading = false;
+				duration: fadeInTimeMS,
+				complete: function ()
+				{
+					// this shit gets called before the last onvolumechange
+					console.log("finished fading");
+					window.isFading = false;
+				}
 			});
 		}
 
@@ -122,6 +161,8 @@
 
 <script type="text/javascript">
 	let userAudioSetting = document.getElementById("audioPlayer");
+	// for debug
+	window.userAudioSetting = userAudioSetting;
 
 	if (localStorage.getItem("defaultUserAudioSetting"))
 	{
@@ -135,13 +176,51 @@
 	userAudioSetting.onvolumechange = function ()
 	{
 		localStorage.setItem("userAudioSetting", this.volume);
-		if (!window.isFading)
+
+		if (!window.isFading && window.isMouseDown)
 		{
 			localStorage.setItem("defaultUserAudioSetting", this.volume);
 		}
-		console.log(this.volume);
+
+		console.log("onvolumechange:", this.volume);
 	};
 
+	// add all the eventlisteners
+	document.body.addEventListener(
+		"click",
+		onMouseClick,
+		false
+	);
+
+	document.body.addEventListener(
+		"move",
+		onMove,
+		false
+	);
+
+	document.body.addEventListener(
+		"dblclick",
+		onDoubleClick,
+		false
+	);
+
+	document.body.addEventListener(
+		"dblclick",
+		onDoubleClick,
+		false
+	);
+
+	document.body.addEventListener(
+		"mousedown",
+		onMouseDown,
+		false
+	);
+
+	document.body.addEventListener(
+		"mouseup",
+		onMouseUp,
+		false
+	);
 </script>
 </body>
 </html>

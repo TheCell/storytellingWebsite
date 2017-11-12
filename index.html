@@ -8,32 +8,33 @@
 	<script type="text/javascript">
 		// setup default variables & functions
 		window.isMouseDown = false;
+		window.userAudioSetting;
 
 		// event functions
 		function onMouseClick(evt)
 		{
-			console.log("mouseClick", evt);
+			//console.log("mouseClick", evt);
 		}
 
 		function onMove(evt)
 		{
-			console.log("move", evt);
+			//console.log("move", evt);
 		}
 
 		function onDoubleClick(evt)
 		{
-			console.log("onDoubleClick", evt);
+			//console.log("onDoubleClick", evt);
 		}
 
 		function onMouseDown(evt)
 		{
-			console.log("onMouseDown", evt);
+			//console.log("onMouseDown", evt);
 			window.isMouseDown = true;
 		}
 
 		function onMouseUp(evt)
 		{
-			console.log("onMouseUp", evt);
+			//console.log("onMouseUp", evt);
 			window.isMouseDown = false;
 		}
 
@@ -51,7 +52,7 @@
 				complete: function ()
 				{
 					// this shit gets called before the last onvolumechange
-					console.log("finished fading");
+					//console.log("finished fading");
 					window.isFading = false;
 				}
 			});
@@ -70,7 +71,7 @@
 				complete: function ()
 				{
 					// this shit gets called before the last onvolumechange
-					console.log("finished fading");
+					//console.log("finished fading");
 					window.isFading = false;
 				}
 			});
@@ -101,7 +102,7 @@
 			}
 			else if (audioFiles.length > 0)
 			{
-				audioElement.src = audioFiles[audioFiles.length].src;
+				audioElement.src = audioFiles[audioFiles.length -1].src;
 			}
 
 			audioElement.load();
@@ -182,45 +183,39 @@
 			localStorage.setItem("defaultUserAudioSetting", this.volume);
 		}
 
-		console.log("onvolumechange:", this.volume);
+		// console.log("onvolumechange:", this.volume);
 	};
 
 	// add all the eventlisteners
-	document.body.addEventListener(
-		"click",
-		onMouseClick,
-		false
-	);
+	document.body.onclick = function (evt)
+	{
+		onMouseClick(evt);
+	};
 
-	document.body.addEventListener(
-		"move",
-		onMove,
-		false
-	);
+	document.body.onmove = function (evt)
+	{
+		onMove(evt);
+	};
 
-	document.body.addEventListener(
-		"dblclick",
-		onDoubleClick,
-		false
-	);
+	document.body.ondblclick = function (evt)
+	{
+		onDoubleClick(evt);
+	};
 
-	document.body.addEventListener(
-		"dblclick",
-		onDoubleClick,
-		false
-	);
+	document.body.ondblclick = function (evt)
+	{
+		onDoubleClick(evt);
+	};
 
-	document.body.addEventListener(
-		"mousedown",
-		onMouseDown,
-		false
-	);
+	document.body.onmousedown = function (evt)
+	{
+		onMouseDown(evt);
+	};
 
-	document.body.addEventListener(
-		"mouseup",
-		onMouseUp,
-		false
-	);
+	document.body.onmouseup = function (evt)
+	{
+		onMouseUp(evt);
+	};
 </script>
 </body>
 </html>

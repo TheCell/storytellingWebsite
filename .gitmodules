@@ -1,0 +1,3 @@
+[submodule "scrollmagicGit"]
+	path = scrollmagicGit
+	url = git@github.com:janpaepke/ScrollMagic.git

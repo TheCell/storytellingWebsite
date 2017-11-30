@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Storytelling Projekt</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styleBuildup.css">
+	<script src="scrollmagicGit/scrollmagic/minified/ScrollMagic.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- For debugging -->
+	<script src="scrollmagicGit/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+	<!-- For debugging end -->
+
+	<!-- global JS Variables -->
+	<script type="text/javascript">
+		"use strict";
+		let scrollMagicController;
+		let debugMode = true;
+		let allScenes = [];
+
+		$(document).ready(function ()
+		{
+			scrollMagicController = new ScrollMagic.Controller();
+
+			// add Scenes
+			let scene01;
+			scene01 = new ScrollMagic.Scene({
+				triggerElement: "#block01"
+			})
+			.setClassToggle("#block01", "fade-in")
+			.addTo(scrollMagicController);
+
+			allScenes.push(scene01);
+
+			if (debugMode)
+			{
+				allScenes.forEach( function (element, index, arr)
+				{
+					element.addIndicators({
+						name: "scene" + index,
+						indent: 5
+					});
+				})
+			}
+		})
+	</script>
+</head>
+<body>
+	<div class="fullPageContainer">
+		<div class="blockLeft">
+			This Text will be on the left Side
+		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: red;">
+		<div class="blockRight" id="block01">
+			This Text will be on the right Side
+		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: blue;">
+		<div class="blockLeft">
+			This Text will be on the left Side
+		</div>
+		<div class="blockRight">
+			This Text will be on the right Side
+		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: green;">
+		<div class="dataLeft" style="background-color: aqua;">
+			dataLeft blabla
+		</div>
+		<div class="dataRight" style="background-color: aqua;">
+			dataRight blabla
+		</div>
+	</div>
+	<div class="fullPageContainer">
+		<div class="blockLeft">
+			This Text will be on the left Side
+		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: red;">
+		<div class="blockRight">
+			This Text will be on the right Side
+		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: blue;">
+		<div class="blockLeft">
+			This Text will be on the left Side
+		</div>
+		<div class="blockRight">
+			This Text will be on the right Side
+		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: green;">
+		<div class="dataLeft" style="background-color: aqua;">
+			dataLeft blabla
+		</div>
+		<div class="dataRight" style="background-color: aqua;">
+			dataRight blabla
+		</div>
+	</div>
+</body>
+</html>

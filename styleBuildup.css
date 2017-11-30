@@ -1,0 +1,67 @@
+/* boilerplate */
+body, html
+{
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: #777;
+}
+
+/* custom styles */
+#block01
+{
+	opacity: 0;
+	transition: all 1s ease-out;
+}
+
+/* basic blocks */
+.fullPageContainer
+{
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 0px;
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-rows: repeat(6, 1fr);
+}
+
+.blockLeft
+{
+	grid-column: 1 / span 3;
+	grid-row: 1 / span 6;
+}
+
+.blockRight
+{
+	grid-column: 4 / span 3;
+	grid-row: 1 / span 6;
+}
+
+.dataLeft
+{
+	grid-row: 3 / span 2;
+	grid-column: 2 / span 2;
+}
+
+.dataRight
+{
+	grid-row: 3 / span 2;
+	grid-column: 4 / span 2;
+}
+
+/* animations */
+.fade-in
+{
+	opacity: 1;
+}
+
+.fade-out
+{
+	opacity: 0;
+}
+
+#block01.fade-in
+{
+	opacity: 1;
+}

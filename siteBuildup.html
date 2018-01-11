@@ -27,12 +27,18 @@
 			// add Scenes
 			let scene01;
 			scene01 = new ScrollMagic.Scene({
-				triggerElement: "#block01"
-			})
-			.setClassToggle("#block01", "fade-in")
-			.addTo(scrollMagicController);
-
+				triggerElement: "#block01"})
+				.setClassToggle("#block01", "fade-in")
+				.addTo(scrollMagicController);
 			allScenes.push(scene01);
+
+			let scene02;
+			scene02 = new ScrollMagic.Scene({
+				triggerElement: "#triggerBlock02",
+				duration: 300})
+				.setPin("#block02")
+				.addTo(scrollMagicController);
+			allScenes.push(scene02);
 
 			if (debugMode)
 			{
@@ -66,11 +72,11 @@
 			This Text will be on the right Side
 		</div>
 	</div>
-	<div class="fullPageContainer" style="background-color: green;">
+	<div class="fullPageContainer" id="triggerBlock02" style="background-color: green;">
 		<div class="dataLeft" style="background-color: aqua;">
 			dataLeft blabla
 		</div>
-		<div class="dataRight" style="background-color: aqua;">
+		<div class="dataRight" id="block02" style="background-color: aqua;">
 			dataRight blabla
 		</div>
 	</div>
@@ -99,6 +105,14 @@
 		<div class="dataRight" style="background-color: aqua;">
 			dataRight blabla
 		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: green;">
+		<div class="dataRight" style="background-color: aqua;">
+			dataRight blabla
+		</div>
+	</div>
+	<div class="fullPageContainer" style="background-color: white;">
+		<img src="images/exampleWhatsApp.PNG" class="whatsappImage">
 	</div>
 </body>
 </html>

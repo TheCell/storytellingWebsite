@@ -6,22 +6,21 @@ body, html
 	color: #777;
 }
 
-.testText
+.slide
 {
 	font-family: 'Barlow Condensed', sans-serif;
 	margin-top: 33vh;
 	width: 45vw;
-	float: right;
 }
 
-.testText h1
+.slide h1
 {
 	color: white;
 	margin-bottom: 100vh;
 	font-size: 2.6em;
 }
 
-.testText p 
+.slide p 
 {
 	color: white;
 	font-size: 2em;
@@ -29,7 +28,16 @@ body, html
 	width: 80%;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+	padding-left:50px;
+}
+
+.bgimg
 {
 	position: relative;
 	opacity: 0.9;
@@ -37,28 +45,35 @@ body, html
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-
+	min-height: 300vh;
 }
-.bgimg-1
+.s-1
 {
 	background-image: url("images/coffee.gif");
-	min-height: 300vh;
 	height: auto;
 }
 
-.bgimg-2
+.s-2
 {
 	background-image: url("images/train.gif");
-	min-height: 300vh;
+	
 	/* min-height: 400px; */
 }
 
-.bgimg-3
+.s-3
 {
 	background-image: url("images/img_parallax3.jpg");
 	min-height: 100%;
 	/* min-height: 400px; */
 }
+
+.s-7
+{
+	background-image: url("images/mountainBeer.gif");
+	min-height: 100%;
+	/* min-height: 400px; */
+}
+
 
 .caption
 {

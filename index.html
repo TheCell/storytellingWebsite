@@ -116,25 +116,21 @@
 </head>
 <body>
 
-<audio controls="controls" id="audioPlayer" loop>
+<!-- <audio controls="controls" id="audioPlayer" loop>
 	Your old ugly browser does not support the <code>audio</code> element.
 	<source src="audio/Twiced_O_-_03_-_Fugue_Of_The_Masses.mp3" type="audio/wav">
 	<source src="audio/Gabe_Boyer_-_03_-_Got_to_Get_With_You.mp3" type="audio/wav">
 	<source src="audio/La_Drugs_-_02_-_Bathroom_Stall.mp3" type="audio/wav">
-</audio>
+</audio> -->
 
 
 
-<div class="bgimg-1">
+<div class="bgimg s-1">
 
-		<!--<span class="border">SCROLL DOWN</span>-->
 
-		<div  class="testText">
-			
-			<h1>A day in the life of a student…</h1>
-			<p>
-				… one morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. 
-			</p>
+		<div  class="slide right">
+			<h1>Ein Tag im Leben eines Digital Ideation Botschafters.</h1>
+			<p>Ahh, ein guter Kaffee und schon ist mein Morgen gut gestartet…</p>
 		</div>
 
 
@@ -145,13 +141,56 @@
 	<p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
 </div>-->
 
-<div class="bgimg-2">
-	<div  class="testText">
-			<h1></h1>
-			<p>
-				… one morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. 
-			</p>
-		</div>
+<div class="bgimg s-2">
+	<div  class="slide left"></div>
+</div>
+
+<div class="bgimg s-3">
+	<div  class="slide rigt">
+		<p>Jetzt gehts aber los, ich habe noch einiges für die Schule zu erledigen. Zum glück habe ich an meinem Atelierplatz ruhe</p>
+	</div>
+</div>
+
+<div class="bgimg s-4">
+	<div  class="slide left">
+		<p>Jetzt gehts aber los, ich habe noch einiges für die Schule zu erledigen. Zum glück habe ich an meinem Atelierplatz ruhe</p>
+	</div>
+</div>
+
+<div class="bgimg s-5">
+	<div  class="slide right">
+		<p>Hmm, in der Mensa waren sie aber auch schon grosszügiger mit den Portionen…</p>
+	</div>
+</div>
+
+<div class="bgimg s-6">
+	<div  class="slide left">
+		<p>Bevor es weitergeht erst noch eine Runde Towerfalls. Heute ist der erste Platz für mich reserviert!</p>
+	</div>
+</div>
+
+<div class="bgimg s-7">
+	<div  class="slide right">
+		<p>Bevor ich mich auf den Nachhauseweg mache, gibt es zuerst noch ein Bier bei dieser herrlichen Aussicht.</p>
+	</div>
+</div>
+
+<div class="bgimg s-8">
+	<div  class="slide left">
+		<p>****, jetzt muss ich mich aber beeilen um meinen Zug noch zu erwischen.</p>
+	</div>
+</div>
+
+<div class="bgimg s-9">
+	<div  class="slide right">
+		<p></p>
+	</div>
+</div>
+
+<div class="bgimg s-9">
+	<div  class="slide left">
+		<p>Der Tag verlief wirklich gut. Wir hatten eine gute Zeit und die Handyanfragen konnte ich alle schon beantworten. Mal schauen ob der nächste Tag das noch toppen kann!</p>
+	</div>
 </div>
 
 <script>
@@ -159,8 +198,8 @@
 	var controller = new ScrollMagic.Controller();
 </script>
  
-<div id="trigger1" class="spacer s0"></div>
-<div id="pin1" class="box2 blue">
+<div id="trigger2" class=""></div>
+<div id="pin1" class="">
 	<p>Stay where you are (at least for a while).</p>
 	<a href="#" class="viewsource">view source</a>
 </div>
@@ -168,7 +207,7 @@
 <script>
 	$(function () { // wait for document ready
 		// build scene
-		var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
+		var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 300})
 						.setPin("#pin1")
 						//.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
 						.addTo(controller);
@@ -183,19 +222,12 @@
 
 <div class="bgimg-3">
 	<div class="caption">
-		<span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
 	</div>
 </div>
 
 <div style="position:relative;">
 	<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
 		<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-	</div>
-</div>
-
-<div class="bgimg-1">
-	<div class="caption">
-		<span class="border">COOL!</span>
 	</div>
 </div>
 

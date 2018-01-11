@@ -58,21 +58,16 @@ body, html
 {
 	background-image: url("images/train.gif");
 	
-	/* min-height: 400px; */
 }
 
 .s-3
 {
 	background-image: url("images/img_parallax3.jpg");
-	min-height: 100%;
-	/* min-height: 400px; */
 }
 
 .s-7
 {
 	background-image: url("images/mountainBeer.gif");
-	min-height: 100%;
-	/* min-height: 400px; */
 }
 
 

@@ -68,7 +68,15 @@ body, html
 
 .whatsappImage
 {
+	/*
 	height: 100%;
 	width: 100%;
+	*/
+	height: 100vh;
 	object-fit: cover;
+}
+
+.whatsappImageContainer
+{
+	height: 200vh;
 }

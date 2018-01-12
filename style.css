@@ -6,19 +6,6 @@ body, html
 	color: #777;
 }
 
-#horizontal {
-    position: fixed;
-    width: 437px;
-    left: 0;
-	height: 100%;
-	background-image: url("images/pixel.png");
-}
-
-#displaytest{
-	display: block;
-	height: 100vh;	
-}
-
 .slide
 {
 	font-family: 'Barlow Condensed', sans-serif;
@@ -69,7 +56,7 @@ body, html
 
 .s-2
 {
-	background-image: url("images/train.gif");
+	background-image: url("images/train.jpeg");
 }
 
 .s-3
@@ -81,6 +68,12 @@ body, html
 {
 	background-image: url("images/AtelierCoffee.gif");
 }
+
+.s-5
+{
+	background-image: url("images/mensa.jpg");
+}
+
 
 .s-6
 {
@@ -97,6 +90,10 @@ body, html
 	background-image: url("images/zugverspaetung.gif");
 }
 
+.s-9
+{
+	background-image: url("images/dinner.jpg");
+}
 
 .caption
 {

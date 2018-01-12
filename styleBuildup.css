@@ -66,6 +66,20 @@ body, html
 	opacity: 1;
 }
 
+#triggerBlock03
+{
+	width: 100%;
+	height: 100%;
+	/*overflow: hidden;*/
+}
+
+#block03
+{
+	/*width: 100%;*/
+	/*height: 100%;*/
+	position: absolute;
+}
+
 .whatsappImage
 {
 	/*
@@ -78,5 +92,5 @@ body, html
 
 .whatsappImageContainer
 {
-	height: 200vh;
+	height: 100vh;
 }

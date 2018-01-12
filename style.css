@@ -46,8 +46,12 @@ body, html
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 300vh;
-	border: 1px solid black;
 }
+
+.last{
+	min-height: 150vh;
+}
+
 .s-1
 {
 	background-image: url("images/coffee.gif");
@@ -74,7 +78,6 @@ body, html
 	background-image: url("images/mensa.jpg");
 }
 
-
 .s-6
 {
 	background-image: url("images/towerfalls.gif");
@@ -93,6 +96,11 @@ body, html
 .s-9
 {
 	background-image: url("images/dinner.jpg");
+}
+
+.s-10
+{
+	
 }
 
 .caption

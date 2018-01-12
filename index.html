@@ -146,26 +146,26 @@
 	<div  class="slide left"></div>
 </div>
 
-<!-- TWITTER 1 -->
-<div class="fullPageContainer" class="whatsappImageContainer" id="whatsAppTriggerBlock03" style="background-color: white;">
+<!-- TWITTER -->
+<div class="fullPageContainer" class="whatsappImageContainer" id="whatsAppTriggerBlock01" style="background-color: white;">
 	
-	<img src="images/exampleWhatsApp.PNG" id="whatsAppBlock03" class="whatsappImage">
+	<img src="images/exampleWhatsApp.PNG" id="whatsAppBlock01" class="whatsappImage">
 
 	<script type="text/javascript">
-		let scene03;
-		let whatsAppWipeAnimation = new TimelineMax()
+		let scene01;
+		let whatsAppWipeAnimation1 = new TimelineMax()
 			.fromTo(
-				"#whatsAppBlock03",
+				"#whatsAppBlock01",
 				1, // duration in seconds
 				{x: "-100%"},
 				{x: "300%", ease: Linear.easeNone});
 
-		scene03 = new ScrollMagic.Scene({
-			triggerElement: "#whatsAppTriggerBlock03",
+		scene01 = new ScrollMagic.Scene({
+			triggerElement: "#whatsAppTriggerBlock01",
 			triggerHook: "onLeave",
 			duration: "100%"})
-			.setPin("#whatsAppTriggerBlock03")
-			.setTween(whatsAppWipeAnimation)
+			.setPin("#whatsAppTriggerBlock01")
+			.setTween(whatsAppWipeAnimation1)
 			.addTo(controller);
 	</script>
 </div>
@@ -190,6 +190,30 @@
 	</div>
 </div>
 
+<!-- WHATSAPP 1 -->
+<div class="fullPageContainer" class="whatsappImageContainer" id="whatsAppTriggerBlock02" style="background-color: white;">
+	
+	<img src="images/exampleWhatsApp.PNG" id="whatsAppBlock02" class="whatsappImage">
+
+	<script type="text/javascript">
+		let scene02;
+		let whatsAppWipeAnimation2 = new TimelineMax()
+			.fromTo(
+				"#whatsAppBlock02",
+				1, // duration in seconds
+				{x: "-100%"},
+				{x: "300%", ease: Linear.easeNone});
+
+		scene02 = new ScrollMagic.Scene({
+			triggerElement: "#whatsAppTriggerBlock02",
+			triggerHook: "onLeave",
+			duration: "100%"})
+			.setPin("#whatsAppTriggerBlock02")
+			.setTween(whatsAppWipeAnimation2)
+			.addTo(controller);
+	</script>
+</div>
+
 <!-- TOWERFALLS -->
 <div class="bgimg s-6">
 	<div  class="slide right">
@@ -202,6 +226,30 @@
 	<div  class="slide left">
 		<p>Bevor ich mich auf den Nachhauseweg mache, gibt es zuerst noch ein Bier bei dieser herrlichen Aussicht.</p>
 	</div>
+</div>
+
+<!-- WHATSAPP 2 - SHIT GOT REAL -->
+<div class="fullPageContainer" class="whatsappImageContainer" id="whatsAppTriggerBlock03" style="background-color: white;">
+	
+	<img src="images/exampleWhatsApp.PNG" id="whatsAppBlock03" class="whatsappImage">
+
+	<script type="text/javascript">
+		let scene03;
+		let whatsAppWipeAnimation3 = new TimelineMax()
+			.fromTo(
+				"#whatsAppBlock03",
+				1, // duration in seconds
+				{x: "-100%"},
+				{x: "300%", ease: Linear.easeNone});
+
+		scene03 = new ScrollMagic.Scene({
+			triggerElement: "#whatsAppTriggerBlock03",
+			triggerHook: "onLeave",
+			duration: "100%"})
+			.setPin("#whatsAppTriggerBlock03")
+			.setTween(whatsAppWipeAnimation3)
+			.addTo(controller);
+	</script>
 </div>
 
 <!-- SBB -->
@@ -222,6 +270,37 @@
 <div class="bgimg s-10">
 	<div  class="slide right">
 		<p>Der Tag verlief wirklich gut. Wir hatten eine gute Zeit und die Handyanfragen konnte ich alle schon beantworten. Mal schauen ob der nächste Tag das noch toppen kann!</p>
+	</div>
+</div>
+
+<!-- WHATSAPP 3 -->
+<div class="fullPageContainer" class="whatsappImageContainer" id="whatsAppTriggerBlock04" style="background-color: white;">
+	
+	<img src="images/exampleWhatsApp.PNG" id="whatsAppBlock04" class="whatsappImage">
+
+	<script type="text/javascript">
+		let scene04;
+		let whatsAppWipeAnimation4 = new TimelineMax()
+			.fromTo(
+				"#whatsAppBlock04",
+				1, // duration in seconds
+				{x: "-100%"},
+				{x: "130%", ease: Linear.easeNone});
+
+		scene04 = new ScrollMagic.Scene({
+			triggerElement: "#whatsAppTriggerBlock04",
+			triggerHook: "onLeave",
+			duration: "100%"})
+			.setPin("#whatsAppTriggerBlock04")
+			.setTween(whatsAppWipeAnimation4)
+			.addTo(controller);
+	</script>
+</div>
+
+<!-- TO BE CONTINUED -->
+<div class="bgimg last">
+	<div  class="slide ">
+		<p  style="margin:100vh 0 0 0;color: black; text-align:center;">TO BE CONTINUED…</p>
 	</div>
 </div>
 

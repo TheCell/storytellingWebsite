@@ -45,15 +45,16 @@
 			let scene03;
 			let whatsAppWipeAnimation = new TimelineMax()
 				.fromTo(
-					"#triggerBlock03",
-					0.5,
+					"#block03",
+					1, // duration in seconds
 					{x: "-100%"},
-					{x: "100%", ease: Linear.easeNone});
+					{x: "300%", ease: Linear.easeNone});
+
 			scene03 = new ScrollMagic.Scene({
 				triggerElement: "#triggerBlock03",
-				triggerHook: "onEnter",
-				duration: "300%"})
-				.setPin("#block03")
+				triggerHook: "onLeave",
+				duration: "100%"})
+				.setPin("#triggerBlock03")
 				.setTween(whatsAppWipeAnimation)
 				.addTo(scrollMagicController);
 			allScenes.push(scene03);
@@ -131,6 +132,11 @@
 	</div>
 	<div class="fullPageContainer" class="whatsappImageContainer" id="triggerBlock03" style="background-color: white;">
 		<img src="images/exampleWhatsApp.PNG" id="block03" class="whatsappImage">
+	</div>
+	<div class="fullPageContainer" style="background-color: green;">
+		<div class="dataRight" style="background-color: aqua;">
+			dataRight blabla
+		</div>
 	</div>
 </body>
 </html>

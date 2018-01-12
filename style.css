@@ -112,6 +112,35 @@ h3
 	color: #111;
 }
 
+.whatsappImageContainer
+{
+	height: 100vh;
+}
+
+.whatsappImage
+{
+	/*
+	height: 100%;
+	width: 100%;
+	*/
+	height: 100vh;
+	object-fit: cover;
+}
+
+#whatsAppTriggerBlock03
+{
+	width: 100%;
+	height: 100%;
+	/*overflow: hidden;*/
+}
+
+#whatsAppBlock03
+{
+	/*width: 100%;*/
+	/*height: 100%;*/
+	position: absolute;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px)
 {

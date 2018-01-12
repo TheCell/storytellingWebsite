@@ -57,12 +57,16 @@ body, html
 .s-2
 {
 	background-image: url("images/train.gif");
-	
 }
 
 .s-3
 {
-	background-image: url("images/img_parallax3.jpg");
+	background-image: url("images/Atelier.gif");
+}
+
+.s-4
+{
+	background-image: url("images/AtelierCoffee.gif");
 }
 
 .s-6
@@ -73,6 +77,11 @@ body, html
 .s-7
 {
 	background-image: url("images/mountainBeer.gif");
+}
+
+.s-8
+{
+	background-image: url("images/zugverspaetung.gif");
 }
 
 

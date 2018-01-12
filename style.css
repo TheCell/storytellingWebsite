@@ -9,7 +9,6 @@ body, html
 .slide
 {
 	font-family: 'Barlow Condensed', sans-serif;
-	margin-top: 33vh;
 	width: 45vw;
 }
 
@@ -18,6 +17,7 @@ body, html
 	color: white;
 	margin-bottom: 100vh;
 	font-size: 2.6em;
+	margin-top: 30vh;
 }
 
 .slide p 
@@ -46,8 +46,12 @@ body, html
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 300vh;
-	border: 1px solid black;
 }
+
+.last{
+	min-height: 50vh;
+}
+
 .s-1
 {
 	background-image: url("images/coffee.gif");
@@ -56,7 +60,7 @@ body, html
 
 .s-2
 {
-	background-image: url("images/train.gif");
+	background-image: url("images/train.jpeg");
 }
 
 .s-3
@@ -67,6 +71,11 @@ body, html
 .s-4
 {
 	background-image: url("images/AtelierCoffee.gif");
+}
+
+.s-5
+{
+	background-image: url("images/mensa.jpg");
 }
 
 .s-6
@@ -86,9 +95,13 @@ body, html
 
 .s-9
 {
-	background-image: url("images/schlafen.gif");
+	background-image: url("images/dinner.jpg");
 }
 
+.s-10
+{
+	background-image: url("images/schlafen.gif");
+}
 
 .caption
 {
@@ -132,14 +145,14 @@ h3
 	object-fit: cover;
 }
 
-#whatsAppTriggerBlock03
+#whatsAppTriggerBlock01
 {
 	width: 100%;
 	height: 100%;
 	/*overflow: hidden;*/
 }
 
-#whatsAppBlock03
+#whatsAppBlock01
 {
 	/*width: 100%;*/
 	/*height: 100%;*/
